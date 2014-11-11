@@ -1,6 +1,14 @@
 
 <h2><%= @task.name %></h2>
-<p><%= @task.detail %></p>
+<p>Detail: <%= @task.detail %></p>
+<p>Statut :
+
+<% if @task.status %>
+[x]
+<% else %>
+[ ]
+<% end %>
+</p>
 
 
 <%= link_to "Edit your task", edit_task_path(@task) %>

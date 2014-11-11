@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20141111142531) do
     t.string   "detail"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "checkbox"
+    t.boolean  "status",     default: false
   end
 
 end

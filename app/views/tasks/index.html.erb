@@ -2,8 +2,9 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <li>
-      <%= link_to task.name, task %>
+  <!-- class css pour passer par exemple en couleur si true ou false -->
+    <li class="<%= task.status ? 'done' : 'pending' %>">
+      <%= task.status ? "[x]" : "[ ]" %> <%= link_to task.name, task %>
     </li>
   <% end %>
 </ul>
